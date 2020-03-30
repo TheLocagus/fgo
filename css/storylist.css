@@ -1,0 +1,68 @@
+main section.main-wrap div.article-wrap {
+    margin: 5vh 10vh 0 10vh;
+}
+
+
+section.main-wrap div.main-wrapper {
+    width: 80%;
+    min-height: 100%;
+    margin: 0 auto;
+    position: relative;
+    /* border: 3px solid rgb(47, 47, 230); */
+}
+
+
+.wrapper main section.main-wrap h2 {
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-image: linear-gradient(0deg, #154397 0%, #1d4ea8 10%, #2e67cf 50%, #1d4ea8 90%, #154397 100%);
+    ;
+    /* border-bottom: 1px solid blue; */
+    /* background-image: linear-gradient(0deg, blue 0%, #eee 15%, #eee 85%, blue 100%); */
+}
+
+.wrapper main section.main-wrap div.main-wrapper div.arc1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+div.arc1 h3 {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 3vw;
+}
+
+div.arc1 div.fuyuki-baner {
+    -ms-flex-preferred-size: 55%;
+    flex-basis: 55%;
+    padding: 1vh 1vw 1vh 0;
+}
+
+div.fuyuki-baner img {
+    width: 100%;
+}
+
+div.separation {
+    width: 95%;
+    height: 0px;
+    -webkit-box-shadow: 0 0 2px 1px blue;
+    box-shadow: 0 0 2px 1px blue;
+    border-radius: 50%;
+    margin: 0 auto;
+}

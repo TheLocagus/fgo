@@ -1,0 +1,65 @@
+main section.main-wrap div.article-wrap {
+    margin: 5vh 10vh 0 10vh;
+}
+
+main section.main-wrap div.article-wrap div.introduction {
+    position: relative;
+    margin-bottom: 3vh;
+}
+
+main section.main-wrap div.article-wrap div.introduction p {
+    font-style: italic;
+}
+
+main section.main-wrap div.article-wrap div.introduction p:nth-last-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main section.main-wrap div.article-wrap h2 {
+    margin-bottom: 4vh;
+}
+
+main section.main-wrap div.article-wrap div.image-float {
+    width: 30%;
+    height: 30vh;
+    float: left;
+    margin-right: 3vh;
+    margin-bottom: 1vh;
+}
+
+main section.main-wrap div.article-wrap div.image-float img {
+    width: 100%;
+    height: 100%;
+}
+
+main section.main-wrap div.article-wrap article {
+    margin-bottom: 5vh;
+}
+
+main section.main-wrap div.article-wrap article p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: justify;
+    text-align-last: right;
+}
+
+main section.main-wrap div.article-wrap article p span {
+    color: blue;
+    cursor: pointer;
+}
+
+main section.main-wrap div.article-wrap div.border-shadow {
+    width: 100%;
+    height: 2px;
+    background-color: blue;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 2px 0 #eee, 0 4px 1px 0 blue, 0 -2px 2px 0 #eee, 0 -4px 1px 0px blue;
+    box-shadow: 0 2px 2px 0 #eee, 0 4px 1px 0 blue, 0 -2px 2px 0 #eee, 0 -4px 1px 0px blue;
+}
+
+div.article-wrap:nth-last-child(1) div.border-shadow {
+    display: none;
+}
