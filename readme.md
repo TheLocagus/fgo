@@ -1,1 +1,0 @@
-FgoSite - pierwszy polski portal z tłumaczeniami gry Fate Grand Order.
