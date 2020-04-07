@@ -1,5 +1,5 @@
-const translateSection = document.querySelector('.li-main-dropdown')
-const menuList = document.querySelector('div.dropdown')
+const translateSection = document.querySelector('li.li-main-dropdown')
+const menuList = document.querySelector('ul.dropdown-story')
 
 function showList() {
     menuList.classList.toggle('active')
@@ -11,7 +11,7 @@ translateSection.addEventListener('click', showList)
 //
 
 const translateSectionx = document.querySelector('.li-main-dropdownx')
-const menuListx = document.querySelector('div.dropdownx')
+const menuListx = document.querySelector('ul.dropdown-anime')
 
 function showListx() {
     menuListx.classList.toggle('active')
