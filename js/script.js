@@ -54,3 +54,13 @@ $('div.up-elevator').on('click', function () {
         scrollTop: 0
     }, 500)
 })
+
+//Navbar mobile
+
+const navBar = document.querySelector('.navbar-mobile');
+const mobileMenu = document.querySelector('nav')
+
+navBar.addEventListener('click', function () {
+    navBar.classList.toggle('active')
+    mobileMenu.classList.toggle('active')
+})
