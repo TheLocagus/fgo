@@ -1,11 +1,19 @@
-/* commit abuse */
-main section.main-wrap div.article-wrap {
-    margin: 5vh 10vh 0 10vh;
+:root {}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-main section.main-wrap div.article-wrap div.introduction {
+main section.main-wrap div.article-wrap {
+    padding: 20px 20px;
+    background-color: #fff;
+}
+
+main>section.main-wrap>div.article-wrap>div.introduction {
     position: relative;
-    margin-bottom: 3vh;
+    margin-bottom: 20px;
 }
 
 main section.main-wrap div.article-wrap div.introduction p {
@@ -19,15 +27,15 @@ main section.main-wrap div.article-wrap div.introduction p:nth-last-child(1) {
 }
 
 main section.main-wrap div.article-wrap h2 {
-    margin-bottom: 4vh;
+    margin-bottom: 20px;
 }
 
 main section.main-wrap div.article-wrap div.image-float {
     width: 30%;
     height: 30vh;
     float: left;
-    margin-right: 3vh;
-    margin-bottom: 1vh;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 main section.main-wrap div.article-wrap div.image-float img {
@@ -36,7 +44,7 @@ main section.main-wrap div.article-wrap div.image-float img {
 }
 
 main section.main-wrap div.article-wrap article {
-    margin-bottom: 5vh;
+    margin-bottom: 40px;
 }
 
 main section.main-wrap div.article-wrap article p {
@@ -44,7 +52,6 @@ main section.main-wrap div.article-wrap article p {
     letter-spacing: 1px;
     line-height: 20px;
     text-align: justify;
-    text-align-last: right;
 }
 
 main section.main-wrap div.article-wrap article p span {

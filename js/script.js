@@ -20,7 +20,7 @@ function showListx() {
     }
 }
 translateSectionx.addEventListener('click', showListx)
-// commit abuse
+
 
 //Triangles
 

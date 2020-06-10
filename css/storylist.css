@@ -5,9 +5,9 @@ main section.main-wrap div.article-wrap {
 
 section.main-wrap div.main-wrapper {
     width: 80%;
-    min-height: 100%;
     margin: 0 auto;
     position: relative;
+    background-color: #fff;
     /* border: 3px solid rgb(47, 47, 230); */
 }
 
@@ -40,7 +40,6 @@ section.main-wrap div.main-wrapper {
     justify-content: flex-start;
 }
 
-/* commit abuse */
 div.arc1 h3 {
     -ms-flex-preferred-size: 45%;
     flex-basis: 45%;
