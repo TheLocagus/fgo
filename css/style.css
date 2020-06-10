@@ -7,7 +7,6 @@
 
 body {
   min-height: 100vh;
-  /* background-image: url("../image/bodyBackground.jpg"); */
   font-family: 'roboto', arial, sans-serif;
   background-color: #eee;
 }
