@@ -1,5 +1,13 @@
 /* ZAWARTOŚĆ MAIN */
 
+:root {
+    --gray-background: #eee;
+    --banner-size: 70vh;
+    --title-size: 15vh;
+    --main-blue: rgb(83, 111, 235);
+    --border-main-blue: rgb(8, 42, 196);
+}
+
 main section.main-wrap {
     min-height: calc(100% - 27vh);
 }
@@ -8,10 +16,27 @@ main section.main-wrap div.main-wrapper {
     margin: 2vh 10vh 0 10vh;
 }
 
-section.main-wrap div.main-wrapper h2 {
+section.main-wrap div.main-wrapper button {
     text-align: center;
     margin-bottom: 5vh;
     font-size: 30px;
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+
+div.main-wrapper button.active {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+div.gallery-wrapper {
+    display: none;
+}
+
+div.gallery-wrapper.active {
+    display: block;
 }
 
 div.main-wrapper div.fuyuki-gallery {
