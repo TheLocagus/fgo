@@ -22,21 +22,6 @@ function showListx() {
 translateSectionx.addEventListener('click', showListx)
 
 
-//Triangles
-
-translateSection.addEventListener('click', function () {
-    if (translateSectionx.classList.contains('triangles')) {
-        translateSectionx.classList.remove('triangles')
-    }
-    translateSection.classList.toggle('triangles')
-})
-translateSectionx.addEventListener('click', function () {
-    if (translateSection.classList.contains('triangles')) {
-        translateSection.classList.remove('triangles')
-    }
-    translateSectionx.classList.toggle('triangles')
-})
-
 
 // Fixed arrow up
 
@@ -63,16 +48,4 @@ const mobileMenu = document.querySelector('nav')
 navBar.addEventListener('click', function () {
     navBar.classList.toggle('active')
     mobileMenu.classList.toggle('active')
-})
-
-
-
-//Open gallery
-
-const sectionOneButton = document.querySelector('div.main-wrapper button')
-const sectionOneGallery = document.querySelector('div.gallery-wrapper')
-
-sectionOneButton.addEventListener('click', function () {
-    sectionOneButton.classList.toggle('active')
-    sectionOneGallery.classList.toggle('active')
 })
