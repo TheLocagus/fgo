@@ -1,7 +1,7 @@
 :root {
   --gray-background: #eee;
   --banner-size: 70vh;
-  --title-size: 15vh;
+  --title-size: 100px;
   --main-blue: rgb(83, 111, 235);
   --border-main-blue: rgb(8, 42, 196);
 }
@@ -11,6 +11,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+* button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 body {
@@ -188,7 +193,7 @@ section.main-wrap {
 .wrapper>main>section.main-wrap>div.title-banner>.border {
   width: 80%;
   color: white;
-  line-height: 20vh;
+  /* line-height: var(--title-size); */
   text-align: center;
   font-size: 26px;
   letter-spacing: 2px;

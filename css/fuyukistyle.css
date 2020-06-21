@@ -3,7 +3,7 @@
 :root {
     --gray-background: #eee;
     --banner-size: 70vh;
-    --title-size: 15vh;
+    --title-size: 100px;
     --main-blue: rgb(83, 111, 235);
     --border-main-blue: rgb(8, 42, 196);
 }
