@@ -16,10 +16,16 @@ section.main-wrap div.main-wrapper {
     background-color: #fff;
 }
 
+.arc1-title {
+    margin: 0 430px;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--main-blue);
+}
 
-.wrapper main section.main-wrap h2 {
-    color: black;
-    font-size: 18px;
+h2.arc-1 {
+    color: var(--main-blue);
+
+    font-size: 24px;
     line-height: 40px;
     text-align: center;
     letter-spacing: 1px;
@@ -114,4 +120,107 @@ div.separation {
     box-shadow: 0 0 2px 1px blue;
     border-radius: 50%;
     margin: 0 auto;
+}
+
+/* Popup */
+.popup-blur {
+    display: none;
+}
+
+.popup-blur.active {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+
+}
+
+.story-alert {
+    display: none;
+}
+
+.story-alert.active {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: var(--main-blue);
+    z-index: 11;
+}
+
+
+.popup-text {
+    color: white;
+    text-align: justify;
+    padding: 40px 25px;
+}
+
+.popup-text p:nth-child(1) {
+    padding-bottom: 20px;
+}
+
+.read-mode {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    color: white;
+}
+
+.read-mode button {
+    display: block;
+    margin: 20px auto;
+    padding: 5px 20px;
+    font-size: 15px;
+    color: var(--border-main-blue);
+    background-color: #fff;
+    border: 2px solid var(--border-main-blue);
+    cursor: pointer;
+}
+
+.read-mode a {
+    text-decoration: none;
+}
+
+.read-mode button:hover {
+    color: #fff;
+    background-color: var(--border-main-blue);
+}
+
+p.popup-reference {
+    margin: 0 25px 10px 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 15px;
+}
+
+.close-popup {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    color: white;
+    /* border-radius: 50%; */
+    background-color: var(--border-main-blue);
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close-popup span {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
 }
