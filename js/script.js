@@ -49,3 +49,121 @@ navBar.addEventListener('click', function () {
     navBar.classList.toggle('active')
     mobileMenu.classList.toggle('active')
 })
+
+
+//Banner
+
+
+
+class Banner {
+    constructor(bannerImages) {
+        this.bannerImages = bannerImages;
+        this.imageContainer = null;
+        this.images = null;
+        this.bannerImagesLength = 0;
+        this.currentSlide = 0;
+        this.bannerDots = null;
+        this.dots = null;
+        this.dotsArr = null;
+
+
+        this.UiSelectors = {
+            imageContainer: '[data-banner]',
+            bannerDots: '[data-bannerDots]',
+        }
+
+        this.initialize();
+
+    }
+
+    initialize() {
+        this.imageContainer = document.querySelector(this.UiSelectors.imageContainer);
+        this.dotsContainer = document.querySelector(this.UiSelectors.bannerDots);
+
+
+        this.bannerImagesLength = this.bannerImages.length;
+
+        this.appendDots();
+
+        this.dots = document.getElementsByClassName('js-banner-dot');
+        this.dotsArr = [...this.dots];
+
+        this.images = document.createElement('img');
+
+        this.setAttributes(0);
+        this.markActiveDot(0);
+
+
+        this.imageContainer.appendChild(this.images);
+
+        this.eventListeners();
+
+        this.bannerInterval = setInterval(() => {
+            this.changeSlide(++this.currentSlide);
+            this.uncheckActiveDot();
+            this.markActiveDot(this.currentSlide);
+
+        }, 6000);
+
+    }
+
+    appendDots() {
+
+        for (let i = 0; i < this.bannerImagesLength; i++) {
+            this.dot = document.createElement('div');
+            this.dot.classList.add('change-slide-dot');
+            this.dot.classList.add('js-banner-dot')
+            this.dot.dataset.number = i;
+            this.dotsContainer.appendChild(this.dot)
+        }
+    }
+
+    markActiveDot(index) {
+        this.dotsArr[index].classList.add('active');
+
+    }
+
+    uncheckActiveDot() {
+        // for (let i = 0; i < this.dotsArr.length; i++) {
+        //     if (this.dotsArr[i]) {
+
+        //     }
+        // }
+        this.dotsArr.forEach((dot) => {
+            if (dot.classList.contains('active')) {
+                dot.classList.remove('active')
+            }
+        })
+    }
+
+    setAttributes(index) {
+        this.images.setAttribute('src', this.bannerImages[index])
+        this.images.setAttribute('alt', `Slide ${index - (-1)}`)
+    }
+    changeSlide(index) {
+        if (index >= this.bannerImagesLength) {
+            index = 0;
+            this.currentSlide = 0;
+        }
+        this.setAttributes(index);
+    }
+
+    eventListeners() {
+        this.dotsArr.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                this.currentSlide = Number(dot.dataset.number);
+                clearInterval(this.bannerInterval);
+                this.uncheckActiveDot();
+                this.markActiveDot(this.currentSlide);
+                this.changeSlide(this.currentSlide);
+                this.bannerInterval = setInterval(() => {
+                    this.changeSlide(++this.currentSlide);
+                    this.uncheckActiveDot();
+                    this.markActiveDot(this.currentSlide);
+                }, 6000);
+            })
+
+        })
+    }
+
+}

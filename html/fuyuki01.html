@@ -77,8 +77,8 @@
     </nav>
     <div class="wrapper">
         <header>
-            <div class="banner">
-                <img src="../image/Semiramis.jpg" alt="">
+            <div class="banner" data-banner>
+
             </div>
             <div class="navbar-mobile"><i class="fas fa-bars"></i></div>
         </header>
@@ -90,17 +90,19 @@
                     </div>
                 </div>
                 <div class="main-wrapper">
-                    <div class="section-buttons">
-                        <button id="1"></button>
-                        <button id="2"></button>
-                        <button id="3"></button>
-                        <button id="4"></button>
-                        <button id="5"></button>
-                        <button id="6"></button>
-                        <button id="7"></button>
-                        <button id="8"></button>
-                        <button id="9"></button>
-                        <button id="10"></button>
+                    <div class="section-buttons-wrapper">
+                        <div class="section-buttons">
+                            <button data-chapter="1">Chapter 1</button>
+                            <button data-chapter="2">Chapter 2</button>
+                            <button data-chapter="3">Chapter 3</button>
+                            <button data-chapter="4">Chapter 4</button>
+                            <button data-chapter="5">Chapter 5</button>
+                            <button data-chapter="6">Chapter 6</button>
+                            <button data-chapter="7">Chapter 7</button>
+                            <button data-chapter="8">Chapter 8</button>
+                            <button data-chapter="9">Chapter 9</button>
+                            <button data-chapter="10">Chapter 10</button>
+                        </div>
                     </div>
                     <div class="gallery-wrapper">
                         <div class="fuyuki-gallery">
@@ -172,8 +174,11 @@
             'positionFromTop': 10
         })
     </script>
+
     <script src="../js/fuyuki.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/banner.js"></script>
+
 </body>
 
 </html>

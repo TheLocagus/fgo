@@ -147,6 +147,26 @@ nav>ul>li>a:hover {
   height: 100%;
 }
 
+.change-slide-dots {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+
+}
+
+.change-slide-dots .change-slide-dot {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 15px 5px;
+}
+
+.change-slide-dots .change-slide-dot.active {
+  border: 1px solid red;
+}
+
 .wrapper>header>.banner>img {
   width: 100%;
   height: 100%;

@@ -13,16 +13,29 @@ main section.main-wrap {
 }
 
 main section.main-wrap div.main-wrapper {
-    margin: 2vh 10vh 0 10vh;
     background-color: #fff;
 }
 
+.section-buttons-wrapper {
+    display: flex;
+}
+
+.section-buttons {
+    display: flex;
+    flex-direction: column;
+
+}
+
 section.main-wrap div.main-wrapper button {
+    margin: 5px 10px;
+    width: 80px;
+    height: 30px;
     text-align: center;
-    font-size: 30px;
+    /* font-size: 30px; */
     border: 1px solid black;
-    padding: 10px 30px;
     cursor: pointer;
+
+
 }
 
 
