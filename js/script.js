@@ -100,10 +100,9 @@ class Banner {
 
         this.bannerInterval = setInterval(() => {
             this.changeSlide(++this.currentSlide);
-            this.uncheckActiveDot();
-            this.markActiveDot(this.currentSlide);
+            this.markActiveDot(this.currentSlide)
 
-        }, 6000);
+        }, 3000);
 
     }
 
@@ -118,34 +117,28 @@ class Banner {
         }
     }
 
-    markActiveDot(index) {
-        this.dotsArr[index].classList.add('active');
-
-    }
-
-    uncheckActiveDot() {
-        // for (let i = 0; i < this.dotsArr.length; i++) {
-        //     if (this.dotsArr[i]) {
-
-        //     }
-        // }
-        this.dotsArr.forEach((dot) => {
-            if (dot.classList.contains('active')) {
-                dot.classList.remove('active')
-            }
-        })
-    }
 
     setAttributes(index) {
         this.images.setAttribute('src', this.bannerImages[index])
         this.images.setAttribute('alt', `Slide ${index - (-1)}`)
     }
+
+    markActiveDot(index) {
+        this.dotsArr[index].classList.add('active');
+    }
+
     changeSlide(index) {
         if (index >= this.bannerImagesLength) {
             index = 0;
             this.currentSlide = 0;
         }
         this.setAttributes(index);
+        this.dotsArr.forEach((dot) => {
+            if (dot.classList.contains('active')) {
+                dot.classList.remove('active')
+            }
+        })
+
     }
 
     eventListeners() {
@@ -153,14 +146,12 @@ class Banner {
             dot.addEventListener('click', () => {
                 this.currentSlide = Number(dot.dataset.number);
                 clearInterval(this.bannerInterval);
-                this.uncheckActiveDot();
-                this.markActiveDot(this.currentSlide);
                 this.changeSlide(this.currentSlide);
+                this.markActiveDot(this.currentSlide)
                 this.bannerInterval = setInterval(() => {
                     this.changeSlide(++this.currentSlide);
-                    this.uncheckActiveDot();
-                    this.markActiveDot(this.currentSlide);
-                }, 6000);
+                    this.markActiveDot(this.currentSlide)
+                }, 3000);
             })
 
         })

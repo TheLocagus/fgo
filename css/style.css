@@ -161,6 +161,7 @@ nav>ul>li>a:hover {
   background-color: #fff;
   border-radius: 50%;
   margin: 15px 5px;
+  cursor: pointer;
 }
 
 .change-slide-dots .change-slide-dot.active {
