@@ -25,6 +25,27 @@ body {
   background-color: #eee;
 }
 
+body .return{
+  margin-left: 2vw;
+  margin-right: 5vw;
+  line-height: 5vh;
+  
+}
+
+.return a{
+  display: block;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.return:hover a{
+  background-color: blue;
+  
+}
 
 body nav {
   position: sticky;
@@ -53,8 +74,7 @@ nav>ul>.logo {
 
 .logo>img {
   height: 100%;
-  margin-left: 2vw;
-  margin-right: 5vw;
+  
 }
 
 nav>ul>li {
